@@ -16,17 +16,19 @@ using namespace std;
 class Interpreter {
 public:
     void start() {
+        Command* command = nullptr;
         while(true) {
             cout << "$";
             string input = getNextLine();
             removeMultipleSpaces(input);
 
-            Command* command = Parser::parse(input);
+            command = Parser::parse(input);
+
             cout << command->parse();
         }
     };
+    static string getMultipleLines();
 private:
-
     static string getNextLine();
     static void removeMultipleSpaces(string &input);
 };

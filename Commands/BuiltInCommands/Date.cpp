@@ -1,6 +1,8 @@
 #include "Date.h"
 
 Date::Date() {
+    shouldReadFromFile = false;
+
     auto now = chrono::system_clock::now();
     time_t currentTime = chrono::system_clock::to_time_t(now);
     tm* localTime = localtime(&currentTime);

@@ -4,24 +4,44 @@
 
 #include "Parser.h"
 
+#include "Interpreter.h"
+
 Command * Parser::parse(string input) {
-    string firstWord = input.substr(0, input.find(" "));
-    if(input.find(" ") != string::npos) {
-        input = input.substr(input.find(" ") + 1, string::npos - firstWord.length());
+    size_t spacePos = input.find(" ");
+    string firstWord;
+    string remainingInput;
+
+    if (spacePos != string::npos) {
+        firstWord = input.substr(0, spacePos);
+        remainingInput = input.substr(spacePos + 1);
+    } else {
+        firstWord = input;
+        remainingInput = "";
     }
+
     if (firstWord == "echo") {
-        return new Echo(input);
+        if(remainingInput.empty()) {
+            remainingInput = Interpreter::getMultipleLines();
+        }
+        return new Echo(remainingInput);
     } else if (firstWord == "time") {
         return new Time();
     } else if (firstWord == "date") {
         return new Date();
     } else if (firstWord == "touch") {
-        return new Touch(input);
+        return new Touch(remainingInput);
     } else if (firstWord == "wc") {
-        return new WC(input);
+        string x = remainingInput;
+        x = x.substr(2,string::npos);
+        if(x.empty()) {
+            remainingInput = remainingInput.substr(0,2) + Interpreter::getMultipleLines();
+        }
+
+        return new WC(remainingInput);
     } else {
         cerr << "Syntax error" << endl;
         return nullptr;
     }
 
 }
+

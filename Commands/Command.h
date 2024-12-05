@@ -20,6 +20,7 @@ public:
     virtual string parse();
 
 protected:
+    bool shouldReadFromFile = true;
     string command;
     string argument;
 

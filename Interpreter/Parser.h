@@ -13,7 +13,7 @@ using namespace std;
 
 class Parser {
 public:
-    static Command* parse(string input);;
+    static Command* parse(string input);
 private:
 };
 

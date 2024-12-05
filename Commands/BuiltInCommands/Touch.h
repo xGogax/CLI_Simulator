@@ -11,7 +11,9 @@ using namespace std;
 
 class Touch : public Command {
 public:
-    Touch(string filename) : Command(filename) {}
+    Touch(string filename) : Command(filename) {
+        shouldReadFromFile = false;
+    }
 
 private:
     virtual string execute(string filename);

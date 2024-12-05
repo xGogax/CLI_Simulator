@@ -5,8 +5,10 @@ string Command::parse() {
         int index1 = command.find('"') + 1;
         int index2 = command.rfind('"');
         argument = command.substr(index1, index2 - index1);
-    } else {
+    } else if(shouldReadFromFile == true){
         argument = Command::readFile(command);
+    } else {
+        argument = command;
     }
 
     string output = execute(argument);
@@ -18,7 +20,8 @@ string Command::readFile(string filename) {
     std::ifstream file(filename);
 
     if (!file.is_open()) {
-        return "ERROR: Could not open the file.";
+        cout << "ERROR: Unable to open file" << endl;
+        return "";
     }
 
     std::stringstream buffer;

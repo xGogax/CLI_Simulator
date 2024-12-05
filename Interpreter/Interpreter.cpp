@@ -1,5 +1,19 @@
 #include "Interpreter.h"
 
+string Interpreter::getMultipleLines() {
+    std::string input = "";
+    std::string line;
+
+    while (getline(cin, line)) {
+        if (!input.empty()) {
+            input += "\n";
+        }
+        input += line;
+    }
+
+    return "\"" + input + "\"";
+}
+
 string Interpreter::getNextLine() {
     char input[513];
 
