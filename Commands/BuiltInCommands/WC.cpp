@@ -44,9 +44,7 @@ int WC::executeChar(string text) {
     int charCount = 0;
 
     for (char ch : text) {
-        if (!std::isspace(ch)) {
-            charCount++;
-        }
+        charCount++;
     }
 
     return charCount;

@@ -20,4 +20,6 @@ add_executable(main.cpp
         Commands/Command.h
         main.cpp
         Interpreter/Parser.cpp
-        Interpreter/Parser.h)
+        Interpreter/Parser.h
+        Commands/BuiltInCommands/Prompt.cpp
+        Commands/BuiltInCommands/Prompt.h)

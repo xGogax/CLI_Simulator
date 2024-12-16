@@ -18,7 +18,6 @@ public:
     ~Command() = default;
 
     virtual string parse();
-
 protected:
     bool shouldReadFromFile = true;
     string command;

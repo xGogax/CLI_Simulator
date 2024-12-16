@@ -1,8 +1,14 @@
 #include "Interpreter.h"
 
+string Interpreter::prompt = "$";
+
 string Interpreter::getMultipleLines() {
-    std::string input = "";
-    std::string line;
+    string input = "";
+    string line;
+
+    if (cin.eof()) {
+        cin.clear();
+    }
 
     while (getline(cin, line)) {
         if (!input.empty()) {

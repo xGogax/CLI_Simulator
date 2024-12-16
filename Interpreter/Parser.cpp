@@ -5,6 +5,7 @@
 #include "Parser.h"
 
 #include "Interpreter.h"
+#include "../Commands/BuiltInCommands/Prompt.h"
 
 Command * Parser::parse(string input) {
     size_t spacePos = input.find(" ");
@@ -33,12 +34,16 @@ Command * Parser::parse(string input) {
     } else if (firstWord == "wc") {
         string x = remainingInput;
         x = x.substr(2,string::npos);
+
         if(x.empty()) {
             remainingInput = remainingInput.substr(0,2) + Interpreter::getMultipleLines();
         }
 
         return new WC(remainingInput);
-    } else {
+    } else if(firstWord == "prompt") {
+        return new Prompt("\"" + remainingInput + "\"");
+    }
+    else {
         cerr << "Syntax error" << endl;
         return nullptr;
     }

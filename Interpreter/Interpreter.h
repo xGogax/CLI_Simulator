@@ -15,18 +15,26 @@ using namespace std;
 
 class Interpreter {
 public:
+    static string prompt;
+
     void start() {
         Command* command = nullptr;
         while(true) {
-            cout << "$";
+            cout << prompt;
+
             string input = getNextLine();
+            if(input == "exit") {
+                break;
+            }
             removeMultipleSpaces(input);
 
             command = Parser::parse(input);
 
             cout << command->parse();
         }
+        delete command;
     };
+
     static string getMultipleLines();
 private:
     static string getNextLine();
