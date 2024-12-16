@@ -24,4 +24,6 @@ add_executable(main.cpp
         Commands/BuiltInCommands/Prompt.cpp
         Commands/BuiltInCommands/Prompt.h
         Commands/BuiltInCommands/Truncate.cpp
-        Commands/BuiltInCommands/Truncate.h)
+        Commands/BuiltInCommands/Truncate.h
+        Commands/BuiltInCommands/RM.cpp
+        Commands/BuiltInCommands/RM.h)

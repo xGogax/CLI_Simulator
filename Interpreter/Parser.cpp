@@ -6,6 +6,7 @@
 
 #include "Interpreter.h"
 #include "../Commands/BuiltInCommands/Prompt.h"
+#include "../Commands/BuiltInCommands/RM.h"
 #include "../Commands/BuiltInCommands/Truncate.h"
 
 Command * Parser::parse(string input) {
@@ -45,6 +46,8 @@ Command * Parser::parse(string input) {
         return new Prompt("\"" + remainingInput + "\"");
     } else if(firstWord == "truncate") {
         return new Truncate(remainingInput);
+    } else if(firstWord == "rm") {
+        return new RM(remainingInput);
     }
     else {
         cerr << "Syntax error" << endl;
