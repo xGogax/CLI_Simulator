@@ -28,4 +28,6 @@ add_executable(main.cpp
         Commands/BuiltInCommands/RM.cpp
         Commands/BuiltInCommands/RM.h
         Commands/BuiltInCommands/TR.cpp
-        Commands/BuiltInCommands/TR.h)
+        Commands/BuiltInCommands/TR.h
+        Commands/BuiltInCommands/Head.cpp
+        Commands/BuiltInCommands/Head.h)

@@ -1,6 +1,7 @@
 #include "Parser.h"
 
 #include "Interpreter.h"
+#include "../Commands/BuiltInCommands/Head.h"
 
 Command * Parser::parse(string input) {
     size_t spacePos = input.find(" ");
@@ -51,6 +52,15 @@ Command * Parser::parse(string input) {
         ss >> with;
 
         return new TR(filename,what,with);
+    } else if(firstWord == "head") {
+        stringstream ss(remainingInput);
+
+        string number, filename;
+
+        ss >> number;
+        ss >> filename;
+
+        return new Head(stoi(number), filename);
     }
     else {
         cerr << "Syntax error" << endl;
