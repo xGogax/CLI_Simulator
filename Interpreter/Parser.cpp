@@ -6,6 +6,7 @@
 
 #include "Interpreter.h"
 #include "../Commands/BuiltInCommands/Prompt.h"
+#include "../Commands/BuiltInCommands/Truncate.h"
 
 Command * Parser::parse(string input) {
     size_t spacePos = input.find(" ");
@@ -42,6 +43,8 @@ Command * Parser::parse(string input) {
         return new WC(remainingInput);
     } else if(firstWord == "prompt") {
         return new Prompt("\"" + remainingInput + "\"");
+    } else if(firstWord == "truncate") {
+        return new Truncate(remainingInput);
     }
     else {
         cerr << "Syntax error" << endl;

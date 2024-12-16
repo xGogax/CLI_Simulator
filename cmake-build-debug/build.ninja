@@ -109,6 +109,12 @@ build CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Prompt.cpp.obj: CXX_COMPI
   OBJECT_DIR = CMakeFiles\main.cpp.dir
   OBJECT_FILE_DIR = CMakeFiles\main.cpp.dir\Commands\BuiltInCommands
 
+build CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Truncate.cpp.obj: CXX_COMPILER__main.2ecpp_unscanned_Debug C$:/Users/gogac/CLionProjects/sl230175d/Commands/BuiltInCommands/Truncate.cpp || cmake_object_order_depends_target_main.cpp
+  DEP_FILE = CMakeFiles\main.cpp.dir\Commands\BuiltInCommands\Truncate.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\main.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.cpp.dir\Commands\BuiltInCommands
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target main.cpp
@@ -117,7 +123,7 @@ build CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Prompt.cpp.obj: CXX_COMPI
 #############################################
 # Link the executable main.cpp.exe
 
-build main.cpp.exe: CXX_EXECUTABLE_LINKER__main.2ecpp_Debug CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Echo.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Time.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Date.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/WC.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Touch.cpp.obj CMakeFiles/main.cpp.dir/Interpreter/Interpreter.cpp.obj CMakeFiles/main.cpp.dir/Commands/Command.cpp.obj CMakeFiles/main.cpp.dir/main.cpp.obj CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Prompt.cpp.obj
+build main.cpp.exe: CXX_EXECUTABLE_LINKER__main.2ecpp_Debug CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Echo.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Time.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Date.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/WC.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Touch.cpp.obj CMakeFiles/main.cpp.dir/Interpreter/Interpreter.cpp.obj CMakeFiles/main.cpp.dir/Commands/Command.cpp.obj CMakeFiles/main.cpp.dir/main.cpp.obj CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Prompt.cpp.obj CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Truncate.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\main.cpp.dir

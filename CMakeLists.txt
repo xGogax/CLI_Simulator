@@ -22,4 +22,6 @@ add_executable(main.cpp
         Interpreter/Parser.cpp
         Interpreter/Parser.h
         Commands/BuiltInCommands/Prompt.cpp
-        Commands/BuiltInCommands/Prompt.h)
+        Commands/BuiltInCommands/Prompt.h
+        Commands/BuiltInCommands/Truncate.cpp
+        Commands/BuiltInCommands/Truncate.h)
