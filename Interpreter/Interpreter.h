@@ -3,13 +3,19 @@
 
 #include <string>
 #include <iostream>
+#include <sstream>
 
 #include "Parser.h"
+
 #include "../Commands/BuiltInCommands/Echo.h"
 #include "../Commands/BuiltInCommands/Time.h"
 #include "../Commands/BuiltInCommands/Date.h"
 #include "../Commands/BuiltInCommands/Touch.h"
 #include "../Commands/BuiltInCommands/WC.h"
+#include "../Commands/BuiltInCommands/Prompt.h"
+#include "../Commands/BuiltInCommands/RM.h"
+#include "../Commands/BuiltInCommands/Truncate.h"
+#include "../Commands/BuiltInCommands/TR.h"
 
 using namespace std;
 

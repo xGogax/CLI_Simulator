@@ -1,13 +1,6 @@
-//
-// Created by xGogax on 12/3/2024.
-//
-
 #include "Parser.h"
 
 #include "Interpreter.h"
-#include "../Commands/BuiltInCommands/Prompt.h"
-#include "../Commands/BuiltInCommands/RM.h"
-#include "../Commands/BuiltInCommands/Truncate.h"
 
 Command * Parser::parse(string input) {
     size_t spacePos = input.find(" ");
@@ -48,6 +41,16 @@ Command * Parser::parse(string input) {
         return new Truncate(remainingInput);
     } else if(firstWord == "rm") {
         return new RM(remainingInput);
+    } else if(firstWord == "tr") {
+        stringstream ss(remainingInput);
+
+        string filename, what, with;
+
+        ss >> filename;
+        ss >> what;
+        ss >> with;
+
+        return new TR(filename,what,with);
     }
     else {
         cerr << "Syntax error" << endl;
