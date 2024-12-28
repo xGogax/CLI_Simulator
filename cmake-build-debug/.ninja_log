@@ -1,8 +1,8 @@
 # ninja log v6
 5	1000	7560726492215770	CMakeFiles/main.cpp.dir/Interpreter/Interpreter.cpp.obj	b88dad6f229ad6ae
-2	230	7560816865537928	build.ninja	87b7f63d1d82a629
+2	230	7571081984296674	build.ninja	87b7f63d1d82a629
 379	464	7544475381767128	Intrepeter.exe	fbc5147826c9f998
-12	1065	7560726492285783	CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj	b7823abb7d854db9
+27	1155	7560841737637320	CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj	b7823abb7d854db9
 5	848	7560727032267500	CMakeFiles/main.cpp.dir/main.cpp.obj	40efc6e0b6019f8f
 15	556	7560687640056866	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/WC.cpp.obj	2c38188c35ac007e
 9	1058	7560687639996841	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Time.cpp.obj	e333170803b1e7e4
@@ -11,10 +11,18 @@
 18	508	7560687640086869	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Touch.cpp.obj	a73c77c37c29a901
 8	378	7560703273642993	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/RM.cpp.obj	7dd84752e1541ece
 12	1066	7560687640026860	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Date.cpp.obj	6654f63d812eb97d
-849	955	7560727040702582	main.cpp.exe	8fa7bd8fb2c94a7f
+1155	1419	7560841748925417	main.cpp.exe	4654478ffa42d659
 15	966	7560726492315795	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Prompt.cpp.obj	19910be762ed568d
 8	417	7560699489489257	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Truncate.cpp.obj	d7800be82a61e2b4
 18	419	7560726492345799	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/TR.cpp.obj	d4f51e13cbfffbc6
 32	511	7560841737687336	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Head.cpp.obj	963fcb7b61fc5c80
-27	1155	7560841737637320	CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj	b7823abb7d854db9
-1155	1419	7560841748925417	main.cpp.exe	4654478ffa42d659
+23	1118	7571095082115495	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Batch.cpp.obj	862620338cd1e558
+19	1126	7571095082085467	CMakeFiles/main.cpp.dir/Commands/BuiltInCommands/Prompt.cpp.obj	19910be762ed568d
+12	1128	7571095081999448	CMakeFiles/main.cpp.dir/main.cpp.obj	40efc6e0b6019f8f
+6	1142	7571095081944358	CMakeFiles/main.cpp.dir/Interpreter/Interpreter.cpp.obj	b88dad6f229ad6ae
+15	1243	7571095082039448	CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj	b7823abb7d854db9
+1243	1578	7571095094323270	main.cpp.exe	ff0169c1e8c4973b
+5	1034	7571095720633498	CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj	b7823abb7d854db9
+1034	1154	7571095730928147	main.cpp.exe	ff0169c1e8c4973b
+5	1022	7571096239728102	CMakeFiles/main.cpp.dir/Interpreter/Parser.cpp.obj	b7823abb7d854db9
+1022	1140	7571096249902404	main.cpp.exe	ff0169c1e8c4973b

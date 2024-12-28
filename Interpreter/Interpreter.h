@@ -16,6 +16,8 @@
 #include "../Commands/BuiltInCommands/RM.h"
 #include "../Commands/BuiltInCommands/Truncate.h"
 #include "../Commands/BuiltInCommands/TR.h"
+#include "../Commands/BuiltInCommands/Batch.h"
+#include "../Commands/BuiltInCommands/Head.h"
 
 using namespace std;
 

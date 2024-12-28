@@ -1,7 +1,6 @@
 #include "Parser.h"
 
 #include "Interpreter.h"
-#include "../Commands/BuiltInCommands/Head.h"
 
 Command * Parser::parse(string input) {
     size_t spacePos = input.find(" ");
@@ -36,6 +35,7 @@ Command * Parser::parse(string input) {
         }
 
         return new WC(remainingInput);
+
     } else if(firstWord == "prompt") {
         return new Prompt("\"" + remainingInput + "\"");
     } else if(firstWord == "truncate") {
@@ -61,6 +61,12 @@ Command * Parser::parse(string input) {
         ss >> filename;
 
         return new Head(stoi(number), filename);
+    } else if(firstWord == "batch") {
+        if(remainingInput.empty()) {
+            remainingInput = Interpreter::getMultipleLines();
+        }
+
+        return new Batch(remainingInput);
     }
     else {
         cerr << "Syntax error" << endl;
